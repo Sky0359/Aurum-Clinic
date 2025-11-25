@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aurum Clinic</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <style>
+    /* small helpers for demo */
+    .hero-bg { background: linear-gradient(180deg,#0ea5e9 0%, #0369a1 100%); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- NAV -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">SF</div>
+        <h1 class="text-xl font-semibold text-blue-600">Aurum Clinic</h1>
+      </div>
+      <nav class="hidden md:flex gap-6 items-center">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#services" class="hover:text-blue-600">Services</a>
+        <a href="#doctors" class="hover:text-blue-600">Doctors</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+        <a href="#appointment" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Book Appointment</a>
+      </nav>
+      <button id="mobileToggle" class="md:hidden">☰</button>
+    </div>
+    <div id="mobileMenu" class="hidden bg-white border-t">
+      <div class="px-6 py-4 flex flex-col gap-2">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#contact">Contact</a>
+        <a href="#appointment" class="bg-blue-600 text-white px-4 py-2 rounded-lg w-max">Book Appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero-bg text-white py-20">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
+        <div class="md:w-1/2">
+          <h2 class="text-4xl font-bold mb-4">Comprehensive Care for Your Family</h2>
+          <p class="mb-6">Expert doctors, advanced facilities — compassionate care every step of the way.</p>
+          <div class="flex gap-4">
+            <a href="#appointment" class="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold">Book Appointment</a>
+            <a href="#contact" class="border border-white px-6 py-3 rounded-lg">Contact Us</a>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <img src="../../assets/images/360_F_210453925_spHdLHUcDJS76oWKzFp4mQeCKW8WisER.jpg" alt="hospital" class="rounded-lg shadow-lg" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / STATS -->
+    <section id="about" class="py-12">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-2xl font-bold text-blue-700 mb-4">About Our Hospital</h3>
+          <p class="text-gray-700 mb-4">Trusted care with experienced specialists and modern facilities.</p>
+          <div id="statsRow" class="grid grid-cols-2 gap-4"></div>
+        </div>
+        <div>
+          <img src="../../assets/images/medicine-healthcare-concept-doctor-stethoscope-clinic-close-up-global-125171698.webp" class="rounded-lg shadow" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-12 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <h3 class="text-2xl font-bold text-center text-blue-700 mb-8">Our Services</h3>
+        <div id="servicesGrid" class="grid sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- DOCTORS -->
+    <section id="doctors" class="py-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <h3 class="text-2xl font-bold text-center text-blue-700 mb-8">Meet Our Doctors</h3>
+        <div id="doctorsGrid" class="grid sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- TIMINGS / APPOINTMENT -->
+    <section id="appointment" class="py-12 bg-blue-50">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-bold text-blue-700 mb-4">Clinic Timings</h3>
+        <div id="timingBox" class="text-lg text-gray-700"></div>
+
+        <div class="mt-8 flex flex-col md:flex-row justify-center gap-4">
+          <a id="whatsappBtn" class="bg-green-600 text-white px-6 py-3 rounded-lg shadow">WhatsApp</a>
+          <a id="callBtn" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow">Call</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-12 bg-gray-100">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-bold text-blue-700 mb-4">Contact Us</h3>
+        <p id="addressLine" class="text-gray-700"></p>
+        <div class="mt-6">
+          <iframe id="mapFrame" class="w-full h-64 rounded-lg shadow" src="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-blue-700 text-white py-6">
+    <div class="max-w-6xl mx-auto px-6 text-center">© <span id="footerYear"></span> Aurum Clinic</div>
+  </footer>
+
+  <!-- CONFIG FALLBACK: if config.json isn't available, this inline JSON will be used -->
+  <script id="__INLINE_CONFIG" type="application/json">
+  {
+    "site": {
+      "name": "Sunrise Family Clinic",
+      "tagline": "Comprehensive Care for Your Family",
+      "phone": "+919876543210",
+      "whatsapp": "+919876543210",
+      "address": "12, MG Road, Indore, MP, India",
+      "mapQuery": "Indore"
+    },
+    "stats": [
+      { "label": "Beds", "value": "75+" },
+      { "label": "ICU Beds", "value": "15" },
+      { "label": "Patients", "value": "10,000+" },
+      { "label": "Doctors", "value": "25+" }
+    ],
+    "services": [
+      { "title": "General Medicine", "desc": "Outpatient and inpatient care" },
+      { "title": "Cardiology", "desc": "Heart care and surgery" },
+      { "title": "Orthopedics", "desc": "Joint replacement & trauma" },
+      { "title": "Pediatrics", "desc": "Child care & immunizations" },
+      { "title": "Diabetology", "desc": "Diabetes management" },
+      { "title": "Emergency", "desc": "24/7 emergency services" }
+    ],
+    "doctors": [
+      { "name": "Dr. Arjun Sharma", "qual": "MBBS, MD (Gen Med)", "spec": "General Medicine", "img": "../../assets/images/cartoon-images-of-doctors-0.png" },
+      { "name": "Dr. Priya Verma", "qual": "MBBS, DNB", "spec": "Cardiology", "img": "../../assets/images/cartoon-images-of-doctors-0.png" },
+      { "name": "Dr. Rahul Jain", "qual": "MS (Ortho)", "spec": "Orthopedics", "img": "https://via.placeholder.com/320x220" }
+    ],
+    "timings": {
+      "mon_sat": ["10:00 AM - 1:00 PM","5:00 PM - 9:00 PM"],
+      "sunday": "Closed"
+    }
+  }
+  </script>
+
+  <script>
+    (function(){
+      // Mobile menu toggle
+      $('#mobileToggle').on('click', function(){ $('#mobileMenu').toggleClass('hidden'); });
+
+      // Helper: render stats
+      function renderStats(stats){
+        var $r = $('#statsRow').empty();
+        stats.forEach(function(s){
+          var $c = $('<div>').addClass('bg-white rounded-lg p-4 shadow flex flex-col items-start');
+          $c.append('<div class="text-2xl font-bold text-blue-700">'+s.value+'</div>');
+          $c.append('<div class="text-sm text-gray-600">'+s.label+'</div>');
+          $r.append($c);
+        });
+      }
+
+      // Services
+      function renderServices(list){
+        var $g = $('#servicesGrid').empty();
+        list.forEach(function(s){
+          var $card = $('<div>').addClass('bg-white rounded-lg p-6 shadow');
+          $card.append('<h4 class="font-semibold text-lg mb-2">'+s.title+'</h4>');
+          if(s.desc) $card.append('<p class="text-sm text-gray-600">'+s.desc+'</p>');
+          $g.append($card);
+        });
+      }
+
+      // Doctors
+      function renderDoctors(list){
+        var $g = $('#doctorsGrid').empty();
+        list.forEach(function(d){
+          var $card = $('<div>').addClass('bg-white rounded-lg p-4 shadow text-center');
+          $card.append('<img src="'+(d.img||'https://via.placeholder.com/320x220')+'" class="w-full h-40 object-cover rounded"/>');
+          $card.append('<h4 class="font-semibold mt-3">'+d.name+'</h4>');
+          $card.append('<div class="text-sm text-gray-600">'+d.qual+'</div>');
+          $card.append('<div class="text-sm text-gray-500">'+d.spec+'</div>');
+          $g.append($card);
+        });
+      }
+
+      // Timings
+      function renderTimings(t){
+        var html = '<p><strong>Mon – Sat</strong></p>';
+        t.mon_sat.forEach(function(x){ html += '<p>'+x+'</p>'; });
+        html += '<br><p><strong>'+t.sunday+'</strong></p>';
+        $('#timingBox').html(html);
+      }
+
+      // Load config: try external config.json then fallback to inline
+      function loadConfig(){
+        return fetch('./config.json', {cache: 'no-store'})
+          .then(function(res){ if(!res.ok) throw new Error('no external'); return res.json(); })
+          .catch(function(){
+            var inline = document.getElementById('__INLINE_CONFIG').textContent;
+            return JSON.parse(inline);
+          });
+      }
+
+      // init
+      loadConfig().then(function(cfg){
+        // site
+        document.title = cfg.site && cfg.site.name ? cfg.site.name : document.title;
+        $('#footerYear').text(new Date().getFullYear());
+        $('#addressLine').text(cfg.site && cfg.site.address ? cfg.site.address : '');
+        // whatsapp/call buttons
+        if(cfg.site && cfg.site.whatsapp){
+          $('#whatsappBtn').attr('href', 'https://wa.me/'+cfg.site.whatsapp.replace(/[^0-9]/g,'')).attr('target','_blank');
+        }
+        if(cfg.site && cfg.site.phone){
+          $('#callBtn').attr('href', 'tel:'+cfg.site.phone.replace(/[^0-9+]/g,'')).attr('target','_self');
+        }
+        // map
+        var q = (cfg.site && cfg.site.mapQuery) ? cfg.site.mapQuery : (cfg.site && cfg.site.address ? cfg.site.address : '');
+        $('#mapFrame').attr('src', 'https://maps.google.com/maps?q='+encodeURIComponent(q)+'&t=&z=13&ie=UTF8&iwloc=&output=embed');
+
+        // render blocks
+        if(cfg.stats) renderStats(cfg.stats);
+        if(cfg.services) renderServices(cfg.services);
+        if(cfg.doctors) renderDoctors(cfg.doctors);
+        if(cfg.timings) renderTimings(cfg.timings);
+      }).catch(function(err){
+        console.error('Failed to load config', err);
+      });
+
+    })();
+  </script>
+
+  <!--
+    -------------------------------------------------------------------------
+    SAMPLE config.json (create this file alongside the HTML to override the
+    inline fallback). Save exactly as `config.json` in the same folder as this HTML.
+
+    {
+      "site": {
+        "name": "Aayush Hospitals",
+        "tagline": "Advanced Care, Compassionate Heart",
+        "phone": "+919876543210",
+        "whatsapp": "+919876543210",
+        "address": "123, Hospital Road, City, State, Country",
+        "mapQuery": "Aayush Hospitals"
+      },
+      "stats": [
+        { "label": "Beds", "value": "200+" },
+        { "label": "ICU Beds", "value": "30" },
+        { "label": "Patients", "value": "50,000+" },
+        { "label": "Doctors", "value": "80+" }
+      ],
+      "services": [
+        { "title": "Cardiology", "desc": "Cardiac care and interventions" },
+        { "title": "Orthopedics", "desc": "Joint replacement & trauma" },
+        { "title": "Neurology", "desc": "Stroke and neuro care" }
+      ],
+      "doctors": [
+        { "name": "Dr. A", "qual": "MBBS, MD", "spec": "Cardiology", "img": "https://via.placeholder.com/320x220" },
+        { "name": "Dr. B", "qual": "MS", "spec": "Orthopedics", "img": "https://via.placeholder.com/320x220" }
+      ],
+      "timings": {
+        "mon_sat": ["9:00 AM - 1:00 PM", "5:00 PM - 9:00 PM"],
+        "sunday": "Closed"
+      }
+    }
+
+    -------------------------------------------------------------------------
+  -->
+
+</body>
+</html>
