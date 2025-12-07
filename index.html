@@ -1,288 +1,799 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aurum Clinic</title>
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- jQuery CDN -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
-  <style>
-    /* small helpers for demo */
-    .hero-bg { background: linear-gradient(180deg,#0ea5e9 0%, #0369a1 100%); }
-  </style>
+    <meta charset="utf-8">
+    <title>Aurum-Clinic - NEUROLOGY and SKIN CARE</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-800">
 
-  <!-- NAV -->
-  <header class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center gap-4">
-        <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">SF</div>
-        <h1 class="text-xl font-semibold text-blue-600">Aurum Clinic</h1>
-      </div>
-      <nav class="hidden md:flex gap-6 items-center">
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#services" class="hover:text-blue-600">Services</a>
-        <a href="#doctors" class="hover:text-blue-600">Doctors</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
-        <a href="#appointment" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Book Appointment</a>
-      </nav>
-      <button id="mobileToggle" class="md:hidden">☰</button>
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid py-2 border-bottom d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-decoration-none text-body pe-3" href="#!"><i
+                                class="bi bi-telephone me-2"></i>+012
+                            345 6789</a>
+                        <span class="text-body">|</span>
+                        <a class="text-decoration-none text-body px-3" href="#!"><i
+                                class="bi bi-envelope me-2"></i>info@example.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-body px-2" href="#!">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-body px-2" href="#!">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-body px-2" href="#!">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-body px-2" href="#!">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-body ps-2" href="#!">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="mobileMenu" class="hidden bg-white border-t">
-      <div class="px-6 py-4 flex flex-col gap-2">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#doctors">Doctors</a>
-        <a href="#contact">Contact</a>
-        <a href="#appointment" class="bg-blue-600 text-white px-4 py-2 rounded-lg w-max">Book Appointment</a>
-      </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>Aurum-Clinic</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <a href="price.html" class="nav-item nav-link">Pricing</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                                <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                                <a href="team.html" class="dropdown-item">The Team</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="appointment.html" class="dropdown-item">Appointment</a>
+                                <a href="search.html" class="dropdown-item">Search</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </div>
-  </header>
+    <!-- Navbar End -->
 
-  <main>
 
-    <!-- HERO -->
-    <section class="hero-bg text-white py-20">
-      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
-        <div class="md:w-1/2">
-          <h2 class="text-4xl font-bold mb-4">Comprehensive Care for Your Family</h2>
-          <p class="mb-6">Expert doctors, advanced facilities — compassionate care every step of the way.</p>
-          <div class="flex gap-4">
-            <a href="#appointment" class="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold">Book Appointment</a>
-            <a href="#contact" class="border border-white px-6 py-3 rounded-lg">Contact Us</a>
-          </div>
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5"
+                        style="border-color: rgba(256, 256, 256, .3) !important;">Welcome To Aurum-Clinic</h5>
+                    <h1 class="display-1 text-white mb-md-4">Best NEUROLOGY and SKIN CARE In Your City</h1>
+                    <div class="pt-2">
+                        <a href="#!" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Find Doctor</a>
+                        <a href="#!" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Appointment</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="md:w-1/2">
-          <img src="https://via.placeholder.com/320x220" alt="hospital" class="rounded-lg shadow-lg" />
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded" src="img/about.jpg"
+                            style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">About Us</h5>
+                        <h1 class="display-4">Best Medical Care For Yourself and Your Family</h1>
+                    </div>
+                    <p>Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor
+                        voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum
+                        et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur
+                        takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore.
+                        Amet erat amet et magna</p>
+                    <div class="row g-3 pt-3">
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-user-md text-primary mb-3"></i>
+                                <h6 class="mb-0">Qualified<small class="d-block text-primary">Doctors</small></h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-procedures text-primary mb-3"></i>
+                                <h6 class="mb-0">Emergency<small class="d-block text-primary">Services</small></h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-microscope text-primary mb-3"></i>
+                                <h6 class="mb-0">Accurate<small class="d-block text-primary">Testing</small></h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <div class="bg-light text-center rounded-circle py-4">
+                                <i class="fa fa-3x fa-ambulance text-primary mb-3"></i>
+                                <h6 class="mb-0">Free<small class="d-block text-primary">Ambulance</small></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
+    <!-- About End -->
 
-    <!-- ABOUT / STATS -->
-    <section id="about" class="py-12">
-      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <h3 class="text-2xl font-bold text-blue-700 mb-4">About Our Hospital</h3>
-          <p class="text-gray-700 mb-4">Trusted care with experienced specialists and modern facilities.</p>
-          <div id="statsRow" class="grid grid-cols-2 gap-4"></div>
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Services</h5>
+                <h1 class="display-4">Excellent Medical Services</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-user-md text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Emergency Care</h4>
+                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo
+                            elitr dolor amet sit</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="#!">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-procedures text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Operation & Surgery</h4>
+                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo
+                            elitr dolor amet sit</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="#!">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-stethoscope text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Outdoor Checkup</h4>
+                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo
+                            elitr dolor amet sit</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="#!">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-ambulance text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Ambulance Service</h4>
+                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo
+                            elitr dolor amet sit</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="#!">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-pills text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Medicine & Pharmacy</h4>
+                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo
+                            elitr dolor amet sit</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="#!">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div
+                        class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-microscope text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Blood Testing</h4>
+                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo
+                            elitr dolor amet sit</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="#!">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-          <img src="https://via.placeholder.com/320x220" class="rounded-lg shadow" />
+    </div>
+    <!-- Services End -->
+
+
+    <!-- Appointment Start -->
+    <div class="container-fluid bg-primary my-5 py-5">
+        <div class="container py-5">
+            <div class="row gx-5">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Appointment</h5>
+                        <h1 class="display-4">Make An Appointment For Your Family</h1>
+                    </div>
+                    <p class="text-white mb-5">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum.
+                        Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero
+                        eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit.
+                        Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
+                    <a class="btn btn-dark rounded-pill py-3 px-5 me-3" href="#!">Find Doctor</a>
+                    <a class="btn btn-outline-dark rounded-pill py-3 px-5" href="#!">Read More</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-white text-center rounded p-5">
+                        <h1 class="mb-4">Book An Appointment</h1>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select bg-light border-0" style="height: 55px;">
+                                        <option selected>Choose Department</option>
+                                        <option value="1">Department 1</option>
+                                        <option value="2">Department 2</option>
+                                        <option value="3">Department 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select bg-light border-0" style="height: 55px;">
+                                        <option selected>Select Doctor</option>
+                                        <option value="1">Doctor 1</option>
+                                        <option value="2">Doctor 2</option>
+                                        <option value="3">Doctor 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name"
+                                        style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email"
+                                        style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="date" id="date" data-target-input="nearest">
+                                        <input type="text" class="form-control bg-light border-0 datetimepicker-input"
+                                            placeholder="Date" data-target="#date" data-toggle="datetimepicker"
+                                            style="height: 55px;">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="time" id="time" data-target-input="nearest">
+                                        <input type="text" class="form-control bg-light border-0 datetimepicker-input"
+                                            placeholder="Time" data-target="#time" data-toggle="datetimepicker"
+                                            style="height: 55px;">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Make An
+                                        Appointment</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
+    <!-- Appointment End -->
 
-    <!-- SERVICES -->
-    <section id="services" class="py-12 bg-white">
-      <div class="max-w-6xl mx-auto px-6">
-        <h3 class="text-2xl font-bold text-center text-blue-700 mb-8">Our Services</h3>
-        <div id="servicesGrid" class="grid sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
-      </div>
-    </section>
 
-    <!-- DOCTORS -->
-    <section id="doctors" class="py-12">
-      <div class="max-w-6xl mx-auto px-6">
-        <h3 class="text-2xl font-bold text-center text-blue-700 mb-8">Meet Our Doctors</h3>
-        <div id="doctorsGrid" class="grid sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
-      </div>
-    </section>
-
-    <!-- TIMINGS / APPOINTMENT -->
-    <section id="appointment" class="py-12 bg-blue-50">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <h3 class="text-2xl font-bold text-blue-700 mb-4">Clinic Timings</h3>
-        <div id="timingBox" class="text-lg text-gray-700"></div>
-
-        <div class="mt-8 flex flex-col md:flex-row justify-center gap-4">
-          <a id="whatsappBtn" class="bg-green-600 text-white px-6 py-3 rounded-lg shadow">WhatsApp</a>
-          <a id="callBtn" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow">Call</a>
+    <!-- Pricing Plan Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Medical Packages</h5>
+                <h1 class="display-4">Awesome Medical Programs</h1>
+            </div>
+            <div class="owl-carousel price-carousel position-relative" style="padding: 0 45px 45px 45px;">
+                <div class="bg-light rounded text-center">
+                    <div class="position-relative">
+                        <img class="img-fluid rounded-top" src="img/price-1.jpg" alt="">
+                        <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center"
+                            style="background: rgba(29, 42, 77, .8);">
+                            <h3 class="text-white">Pregnancy Care</h3>
+                            <h1 class="display-4 text-white mb-0">
+                                <small class="align-top fw-normal"
+                                    style="font-size: 22px; line-height: 45px;">$</small>49<small
+                                    class="align-bottom fw-normal" style="font-size: 16px; line-height: 40px;">/
+                                    Year</small>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="text-center py-5">
+                        <p>Emergency Medical Treatment</p>
+                        <p>Highly Experienced Doctors</p>
+                        <p>Highest Success Rate</p>
+                        <p>Telephone Service</p>
+                        <a href="#!" class="btn btn-primary rounded-pill py-3 px-5 my-2">Apply Now</a>
+                    </div>
+                </div>
+                <div class="bg-light rounded text-center">
+                    <div class="position-relative">
+                        <img class="img-fluid rounded-top" src="img/price-2.jpg" alt="">
+                        <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center"
+                            style="background: rgba(29, 42, 77, .8);">
+                            <h3 class="text-white">Health Checkup</h3>
+                            <h1 class="display-4 text-white mb-0">
+                                <small class="align-top fw-normal"
+                                    style="font-size: 22px; line-height: 45px;">$</small>99<small
+                                    class="align-bottom fw-normal" style="font-size: 16px; line-height: 40px;">/
+                                    Year</small>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="text-center py-5">
+                        <p>Emergency Medical Treatment</p>
+                        <p>Highly Experienced Doctors</p>
+                        <p>Highest Success Rate</p>
+                        <p>Telephone Service</p>
+                        <a href="#!" class="btn btn-primary rounded-pill py-3 px-5 my-2">Apply Now</a>
+                    </div>
+                </div>
+                <div class="bg-light rounded text-center">
+                    <div class="position-relative">
+                        <img class="img-fluid rounded-top" src="img/price-3.jpg" alt="">
+                        <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center"
+                            style="background: rgba(29, 42, 77, .8);">
+                            <h3 class="text-white">Dental Care</h3>
+                            <h1 class="display-4 text-white mb-0">
+                                <small class="align-top fw-normal"
+                                    style="font-size: 22px; line-height: 45px;">$</small>149<small
+                                    class="align-bottom fw-normal" style="font-size: 16px; line-height: 40px;">/
+                                    Year</small>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="text-center py-5">
+                        <p>Emergency Medical Treatment</p>
+                        <p>Highly Experienced Doctors</p>
+                        <p>Highest Success Rate</p>
+                        <p>Telephone Service</p>
+                        <a href="#!" class="btn btn-primary rounded-pill py-3 px-5 my-2">Apply Now</a>
+                    </div>
+                </div>
+                <div class="bg-light rounded text-center">
+                    <div class="position-relative">
+                        <img class="img-fluid rounded-top" src="img/price-4.jpg" alt="">
+                        <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center"
+                            style="background: rgba(29, 42, 77, .8);">
+                            <h3 class="text-white">Operation & Surgery</h3>
+                            <h1 class="display-4 text-white mb-0">
+                                <small class="align-top fw-normal"
+                                    style="font-size: 22px; line-height: 45px;">$</small>199<small
+                                    class="align-bottom fw-normal" style="font-size: 16px; line-height: 40px;">/
+                                    Year</small>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="text-center py-5">
+                        <p>Emergency Medical Treatment</p>
+                        <p>Highly Experienced Doctors</p>
+                        <p>Highest Success Rate</p>
+                        <p>Telephone Service</p>
+                        <a href="#!" class="btn btn-primary rounded-pill py-3 px-5 my-2">Apply Now</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
+    <!-- Pricing Plan End -->
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-12 bg-gray-100">
-      <div class="max-w-6xl mx-auto px-6 text-center">
-        <h3 class="text-2xl font-bold text-blue-700 mb-4">Contact Us</h3>
-        <p id="addressLine" class="text-gray-700"></p>
-        <div class="mt-6">
-          <iframe id="mapFrame" class="w-full h-64 rounded-lg shadow" src="" loading="lazy"></iframe>
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Our Doctors</h5>
+                <h1 class="display-4">Qualified Healthcare Professionals</h1>
+            </div>
+            <div class="owl-carousel team-carousel position-relative">
+                <div class="team-item">
+                    <div class="row g-0 bg-light rounded overflow-hidden">
+                        <div class="col-12 col-sm-5 h-100">
+                            <img class="img-fluid h-100" src="img/team-1.jpg" style="object-fit: cover;">
+                        </div>
+                        <div class="col-12 col-sm-7 h-100 d-flex flex-column">
+                            <div class="mt-auto p-4">
+                                <h3>Doctor Name</h3>
+                                <h6 class="fw-normal fst-italic text-primary mb-4">Cardiology Specialist</h6>
+                                <p class="m-0">Dolor lorem eos dolor duo eirmod sea. Dolor sit magna rebum clita rebum
+                                    dolor</p>
+                            </div>
+                            <div class="d-flex mt-auto border-top p-4">
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#!"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#!"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#!"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="row g-0 bg-light rounded overflow-hidden">
+                        <div class="col-12 col-sm-5 h-100">
+                            <img class="img-fluid h-100" src="img/team-2.jpg" style="object-fit: cover;">
+                        </div>
+                        <div class="col-12 col-sm-7 h-100 d-flex flex-column">
+                            <div class="mt-auto p-4">
+                                <h3>Doctor Name</h3>
+                                <h6 class="fw-normal fst-italic text-primary mb-4">Cardiology Specialist</h6>
+                                <p class="m-0">Dolor lorem eos dolor duo eirmod sea. Dolor sit magna rebum clita rebum
+                                    dolor</p>
+                            </div>
+                            <div class="d-flex mt-auto border-top p-4">
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#!"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#!"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#!"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="row g-0 bg-light rounded overflow-hidden">
+                        <div class="col-12 col-sm-5 h-100">
+                            <img class="img-fluid h-100" src="img/team-3.jpg" style="object-fit: cover;">
+                        </div>
+                        <div class="col-12 col-sm-7 h-100 d-flex flex-column">
+                            <div class="mt-auto p-4">
+                                <h3>Doctor Name</h3>
+                                <h6 class="fw-normal fst-italic text-primary mb-4">Cardiology Specialist</h6>
+                                <p class="m-0">Dolor lorem eos dolor duo eirmod sea. Dolor sit magna rebum clita rebum
+                                    dolor</p>
+                            </div>
+                            <div class="d-flex mt-auto border-top p-4">
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#!"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#!"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#!"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
+    <!-- Team End -->
 
-  </main>
 
-  <footer class="bg-blue-700 text-white py-6">
-    <div class="max-w-6xl mx-auto px-6 text-center">© <span id="footerYear"></span> Aurum Clinic</div>
-  </footer>
+    <!-- Search Start -->
+    <div class="container-fluid bg-primary my-5 py-5">
+        <div class="container py-5">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Find A Doctor</h5>
+                <h1 class="display-4 mb-4">Find A Healthcare Professionals</h1>
+                <h5 class="text-white fw-normal">Duo ipsum erat stet dolor sea ut nonumy tempor. Tempor duo lorem eos
+                    sit sed ipsum takimata ipsum sit est. Ipsum ea voluptua ipsum sit justo</h5>
+            </div>
+            <div class="mx-auto" style="width: 100%; max-width: 600px;">
+                <div class="input-group">
+                    <select class="form-select border-primary w-25" style="height: 60px;">
+                        <option selected>Department</option>
+                        <option value="1">Department 1</option>
+                        <option value="2">Department 2</option>
+                        <option value="3">Department 3</option>
+                    </select>
+                    <input type="text" class="form-control border-primary w-50" placeholder="Keyword">
+                    <button class="btn btn-dark border-0 w-25">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search End -->
 
-  <!-- CONFIG FALLBACK: if config.json isn't available, this inline JSON will be used -->
-  <script id="__INLINE_CONFIG" type="application/json">
-  {
-    "site": {
-      "name": "Sunrise Family Clinic",
-      "tagline": "Comprehensive Care for Your Family",
-      "phone": "+919876543210",
-      "whatsapp": "+919876543210",
-      "address": "12, MG Road, Indore, MP, India",
-      "mapQuery": "Indore"
-    },
-    "stats": [
-      { "label": "Beds", "value": "75+" },
-      { "label": "ICU Beds", "value": "15" },
-      { "label": "Patients", "value": "10,000+" },
-      { "label": "Doctors", "value": "25+" }
-    ],
-    "services": [
-      { "title": "General Medicine", "desc": "Outpatient and inpatient care" },
-      { "title": "Cardiology", "desc": "Heart care and surgery" },
-      { "title": "Orthopedics", "desc": "Joint replacement & trauma" },
-      { "title": "Pediatrics", "desc": "Child care & immunizations" },
-      { "title": "Diabetology", "desc": "Diabetes management" },
-      { "title": "Emergency", "desc": "24/7 emergency services" }
-    ],
-    "doctors": [
-      { "name": "Dr. Arjun Sharma", "qual": "MBBS, MD (Gen Med)", "spec": "General Medicine", "img": "https://via.placeholder.com/320x220" },
-      { "name": "Dr. Priya Verma", "qual": "MBBS, DNB", "spec": "Cardiology", "img": "https://via.placeholder.com/320x220" },
-      { "name": "Dr. Rahul Jain", "qual": "MS (Ortho)", "spec": "Orthopedics", "img": "https://via.placeholder.com/320x220" }
-    ],
-    "timings": {
-      "mon_sat": ["10:00 AM - 1:00 PM","5:00 PM - 9:00 PM"],
-      "sunday": "Closed"
-    }
-  }
-  </script>
 
-  <script>
-    (function(){
-      // Mobile menu toggle
-      $('#mobileToggle').on('click', function(){ $('#mobileMenu').toggleClass('hidden'); });
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Testimonial</h5>
+                <h1 class="display-4">Patients Say About Our Services</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-1.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-4 fw-normal">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore
+                                dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor
+                                erat. Erat dolor rebum sit ipsum.</p>
+                            <hr class="w-25 mx-auto">
+                            <h3>Patient Name</h3>
+                            <h6 class="fw-normal text-primary mb-3">Profession</h6>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-2.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-4 fw-normal">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore
+                                dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor
+                                erat. Erat dolor rebum sit ipsum.</p>
+                            <hr class="w-25 mx-auto">
+                            <h3>Patient Name</h3>
+                            <h6 class="fw-normal text-primary mb-3">Profession</h6>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-3.jpg" alt="">
+                                <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle"
+                                    style="width: 60px; height: 60px;">
+                                    <i class="fa fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-4 fw-normal">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore
+                                dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor
+                                erat. Erat dolor rebum sit ipsum.</p>
+                            <hr class="w-25 mx-auto">
+                            <h3>Patient Name</h3>
+                            <h6 class="fw-normal text-primary mb-3">Profession</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
 
-      // Helper: render stats
-      function renderStats(stats){
-        var $r = $('#statsRow').empty();
-        stats.forEach(function(s){
-          var $c = $('<div>').addClass('bg-white rounded-lg p-4 shadow flex flex-col items-start');
-          $c.append('<div class="text-2xl font-bold text-blue-700">'+s.value+'</div>');
-          $c.append('<div class="text-sm text-gray-600">'+s.label+'</div>');
-          $r.append($c);
-        });
-      }
 
-      // Services
-      function renderServices(list){
-        var $g = $('#servicesGrid').empty();
-        list.forEach(function(s){
-          var $card = $('<div>').addClass('bg-white rounded-lg p-6 shadow');
-          $card.append('<h4 class="font-semibold text-lg mb-2">'+s.title+'</h4>');
-          if(s.desc) $card.append('<p class="text-sm text-gray-600">'+s.desc+'</p>');
-          $g.append($card);
-        });
-      }
+    <!-- Blog Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Blog Post</h5>
+                <h1 class="display-4">Our Latest Medical Blog Posts</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-xl-4 col-lg-6">
+                    <div class="bg-light rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
+                        <div class="p-4">
+                            <a class="h3 d-block mb-3" href="#!">Dolor clita vero elitr sea stet dolor justo diam</a>
+                            <p class="m-0">Dolor lorem eos dolor duo et eirmod sea. Dolor sit magna
+                                rebum clita rebum dolor stet amet justo</p>
+                        </div>
+                        <div class="d-flex justify-content-between border-top p-4">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle me-2" src="img/user.jpg" width="25" height="25" alt="">
+                                <small>John Doe</small>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <small class="ms-3"><i class="far fa-eye text-primary me-1"></i>12345</small>
+                                <small class="ms-3"><i class="far fa-comment text-primary me-1"></i>123</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6">
+                    <div class="bg-light rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/blog-2.jpg" alt="">
+                        <div class="p-4">
+                            <a class="h3 d-block mb-3" href="#!">Dolor clita vero elitr sea stet dolor justo diam</a>
+                            <p class="m-0">Dolor lorem eos dolor duo et eirmod sea. Dolor sit magna
+                                rebum clita rebum dolor stet amet justo</p>
+                        </div>
+                        <div class="d-flex justify-content-between border-top p-4">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle me-2" src="img/user.jpg" width="25" height="25" alt="">
+                                <small>John Doe</small>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <small class="ms-3"><i class="far fa-eye text-primary me-1"></i>12345</small>
+                                <small class="ms-3"><i class="far fa-comment text-primary me-1"></i>123</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6">
+                    <div class="bg-light rounded overflow-hidden">
+                        <img class="img-fluid w-100" src="img/blog-3.jpg" alt="">
+                        <div class="p-4">
+                            <a class="h3 d-block mb-3" href="#!">Dolor clita vero elitr sea stet dolor justo diam</a>
+                            <p class="m-0">Dolor lorem eos dolor duo et eirmod sea. Dolor sit magna
+                                rebum clita rebum dolor stet amet justo</p>
+                        </div>
+                        <div class="d-flex justify-content-between border-top p-4">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle me-2" src="img/user.jpg" width="25" height="25" alt="">
+                                <small>John Doe</small>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <small class="ms-3"><i class="far fa-eye text-primary me-1"></i>12345</small>
+                                <small class="ms-3"><i class="far fa-comment text-primary me-1"></i>123</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
 
-      // Doctors
-      function renderDoctors(list){
-        var $g = $('#doctorsGrid').empty();
-        list.forEach(function(d){
-          var $card = $('<div>').addClass('bg-white rounded-lg p-4 shadow text-center');
-          $card.append('<img src="'+(d.img||'https://via.placeholder.com/320x220')+'" class="w-full h-40 object-cover rounded"/>');
-          $card.append('<h4 class="font-semibold mt-3">'+d.name+'</h4>');
-          $card.append('<div class="text-sm text-gray-600">'+d.qual+'</div>');
-          $card.append('<div class="text-sm text-gray-500">'+d.spec+'</div>');
-          $g.append($card);
-        });
-      }
 
-      // Timings
-      function renderTimings(t){
-        var html = '<p><strong>Mon – Sat</strong></p>';
-        t.mon_sat.forEach(function(x){ html += '<p>'+x+'</p>'; });
-        html += '<br><p><strong>'+t.sunday+'</strong></p>';
-        $('#timingBox').html(html);
-      }
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
+                        Get In Touch</h4>
+                    <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed
+                        dolor</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@example.com</p>
+                    <p class="mb-0"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
+                        Quick Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="#!"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-light mb-2" href="#!"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-light mb-2" href="#!"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-light mb-2" href="#!"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                        <a class="text-light mb-2" href="#!"><i class="fa fa-angle-right me-2"></i>Latest Blog</a>
+                        <a class="text-light" href="#!"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
+                        Popular Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="#!"><i class="fa fa-angle-right me-2"></i>Home</a>
+                        <a class="text-light mb-2" href="#!"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                        <a class="text-light mb-2" href="#!"><i class="fa fa-angle-right me-2"></i>Our Services</a>
+                        <a class="text-light mb-2" href="#!"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                        <a class="text-light mb-2" href="#!"><i class="fa fa-angle-right me-2"></i>Latest Blog</a>
+                        <a class="text-light" href="#!"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
+                        Newsletter</h4>
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control p-3 border-0" placeholder="Your Email Address">
+                            <button class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </form>
+                    <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Us</h6>
+                    <div class="d-flex">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#!"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#!"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2" href="#!"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#!"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-primary" href="#!">Your Site Name</a>. All Rights Reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed by <a class="text-primary" href="https://htmlcodex.com"
+                            target="_blank">HTML Codex</a>. Distributed by <a href="https://themewagon.com"
+                            target="_blank">ThemeWagon</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
-      // Load config: try external config.json then fallback to inline
-      function loadConfig(){
-        return fetch('./config.json', {cache: 'no-store'})
-          .then(function(res){ if(!res.ok) throw new Error('no external'); return res.json(); })
-          .catch(function(){
-            var inline = document.getElementById('__INLINE_CONFIG').textContent;
-            return JSON.parse(inline);
-          });
-      }
 
-      // init
-      loadConfig().then(function(cfg){
-        // site
-        document.title = cfg.site && cfg.site.name ? cfg.site.name : document.title;
-        $('#footerYear').text(new Date().getFullYear());
-        $('#addressLine').text(cfg.site && cfg.site.address ? cfg.site.address : '');
-        // whatsapp/call buttons
-        if(cfg.site && cfg.site.whatsapp){
-          $('#whatsappBtn').attr('href', 'https://wa.me/'+cfg.site.whatsapp.replace(/[^0-9]/g,'')).attr('target','_blank');
-        }
-        if(cfg.site && cfg.site.phone){
-          $('#callBtn').attr('href', 'tel:'+cfg.site.phone.replace(/[^0-9+]/g,'')).attr('target','_self');
-        }
-        // map
-        var q = (cfg.site && cfg.site.mapQuery) ? cfg.site.mapQuery : (cfg.site && cfg.site.address ? cfg.site.address : '');
-        $('#mapFrame').attr('src', 'https://maps.google.com/maps?q='+encodeURIComponent(q)+'&t=&z=13&ie=UTF8&iwloc=&output=embed');
+    <!-- Back to Top -->
+    <a href="#!" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-        // render blocks
-        if(cfg.stats) renderStats(cfg.stats);
-        if(cfg.services) renderServices(cfg.services);
-        if(cfg.doctors) renderDoctors(cfg.doctors);
-        if(cfg.timings) renderTimings(cfg.timings);
-      }).catch(function(err){
-        console.error('Failed to load config', err);
-      });
 
-    })();
-  </script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-  <!--
-    -------------------------------------------------------------------------
-    SAMPLE config.json (create this file alongside the HTML to override the
-    inline fallback). Save exactly as `config.json` in the same folder as this HTML.
-
-    {
-      "site": {
-        "name": "Aayush Hospitals",
-        "tagline": "Advanced Care, Compassionate Heart",
-        "phone": "+919876543210",
-        "whatsapp": "+919876543210",
-        "address": "123, Hospital Road, City, State, Country",
-        "mapQuery": "Aayush Hospitals"
-      },
-      "stats": [
-        { "label": "Beds", "value": "200+" },
-        { "label": "ICU Beds", "value": "30" },
-        { "label": "Patients", "value": "50,000+" },
-        { "label": "Doctors", "value": "80+" }
-      ],
-      "services": [
-        { "title": "Cardiology", "desc": "Cardiac care and interventions" },
-        { "title": "Orthopedics", "desc": "Joint replacement & trauma" },
-        { "title": "Neurology", "desc": "Stroke and neuro care" }
-      ],
-      "doctors": [
-        { "name": "Dr. A", "qual": "MBBS, MD", "spec": "Cardiology", "img": "https://via.placeholder.com/320x220" },
-        { "name": "Dr. B", "qual": "MS", "spec": "Orthopedics", "img": "https://via.placeholder.com/320x220" }
-      ],
-      "timings": {
-        "mon_sat": ["9:00 AM - 1:00 PM", "5:00 PM - 9:00 PM"],
-        "sunday": "Closed"
-      }
-    }
-
-    -------------------------------------------------------------------------
-  -->
-
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
-</html>
 
+</html>
